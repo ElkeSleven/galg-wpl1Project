@@ -1,0 +1,90 @@
+﻿<Window x:Class="GALGmain.GALG2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GALGmain"
+        mc:Ignorable="d"
+        Title="GALG2" Height="550" Width="800" ><!--MinHeight="450" MinWidth="600"  -->
+    <Window.Resources>
+        <Style TargetType="Button" >
+            <Setter Property="Background" Value="#00000000" />
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="Background" Value="#00000000" />
+            <Setter Property="Foreground" Value="#FFFAFAFA"/>
+            <Setter Property="BorderBrush" Value="#FFFAFAFA"/>
+            <Setter Property="FontFamily" Value="Verdana Pro Cond"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Background" Value="#00000000" />
+            <Setter Property="Foreground" Value="#FFFAFAFA"/>
+        </Style>
+
+    </Window.Resources>
+    <Grid x:Name="GrindGalig2">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="0.2*"/>
+            <ColumnDefinition  Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="0.2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <!-- colum1 blackbord-->
+        <Viewbox  Grid.ColumnSpan="4"  Grid.Column="1" Grid.RowSpan="3" Grid.Row="1" MaxHeight="1500" MaxWidth="1800"  Stretch="Fill" >
+            <Image Name="imageLevens" Source="/Assets_img/tekst.jpg"   />
+        </Viewbox>
+
+        <Viewbox Grid.Row="2" Grid.Column="2" Margin="10"  >
+            <StackPanel >
+                <Label  Name="LblUitput"   />
+                <Label Name="lblLevens" />
+                <Label Name="lblMaskedWoord" HorizontalContentAlignment="Center"  Margin="0,20,0,0"/>
+                <TextBox  Name="txtInput"   />
+            </StackPanel>
+        </Viewbox>
+
+        <Viewbox   HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Row="3" Grid.Column="2"  >
+            <Label Content="hier komt de tijd te staan" Name="lblDateTime" FontWeight="Heavy" Foreground="Black" />
+        </Viewbox>
+
+        <Viewbox Grid.Row="1" Grid.Column="3" HorizontalAlignment="Right" >
+            <Label Name="lblVersus" Foreground="Black" FontWeight="Heavy"  />
+        </Viewbox>
+
+
+        <!-- colum 2-->
+        <Viewbox Grid.Row="2" Grid.Column="3"  HorizontalAlignment="Center"  Margin="40"  Name="PanelTijdensSpel"  >
+            <StackPanel Orientation="Vertical"   >
+                <Label Name="lblTimer" Content="20" HorizontalContentAlignment="Right" Foreground="IndianRed"  />
+                <Label Name="lblFouteLetters" Content=""  Foreground="HotPink" FontWeight="DemiBold" />
+            </StackPanel>
+
+        </Viewbox>
+
+  
+        <!-- buttons -->
+        <Viewbox  Grid.Row="4" Grid.ColumnSpan="4" Grid.Column="1" Stretch="Uniform">
+            <StackPanel Orientation="Horizontal">
+                <!---->
+                <Button Name="btnRaad" Content="Raad" Margin="5" Click="BtnRaad_Click" />
+                <Button Content="Nieuw spel" Name="btnNieuw" Margin="5" Click="BtnNieuw_Click"   />
+                <Button Name="btnStart" Content="Start" Margin="5"  Click="BtnStart_Click"  />
+                <Button Name="btnTerug" Content="Afsluiten" Click="BtnTerug_Click"  Margin="5" />
+            </StackPanel>
+        </Viewbox>
+
+    </Grid>
+</Window>
+

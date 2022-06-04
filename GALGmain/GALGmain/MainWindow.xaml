@@ -1,0 +1,79 @@
+﻿<Window x:Class="GALGmain.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GALGmain"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="800" MinHeight="450" MinWidth="600">
+   
+        <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+   
+            <!--achtergrond-->
+        <Viewbox  Grid.RowSpan="4"  Stretch="Fill">
+            <Image  Source="/Assets_img/mainPagina.jpg" />
+        </Viewbox>
+        
+         <!--welkoms tekst  -->
+        <Viewbox  Stretch="Uniform" > 
+            <StackPanel  Height="90"  >
+                <Label Content="welkom bij galigje " Foreground="#FFFAFAFA" HorizontalContentAlignment="Center"   Margin="0,10,0,0" />
+                <Label  Content="druk op een app om te starten  " Foreground="#FFFAFAFA" HorizontalContentAlignment="Center"  />
+            </StackPanel>  
+            
+          </Viewbox>
+            
+            
+            <!--Buttons-->
+        <Viewbox Grid.Row="1" Grid.ColumnSpan="3" >
+            <StackPanel Orientation="Vertical">
+
+
+                <!--butons galg 123 -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" >
+
+                    <Button MaxHeight="25"   Margin="10,0 " Name="btnGalig1Window" Click=" BtnGalg1Window_Click " Content="GALG1"/>
+
+
+                    <Button MaxHeight="25"  Name="btnGalig2Window"  Click=" BtnGalg2Window_Click " Content="GALG2"/>
+
+                    <Button MaxHeight="25"  Margin="10,0" Name="btnGalig3Window"  Click="BtnGalg3Window_Click" Content="GALG3"/>
+                </StackPanel>
+
+                <!--alfabet  en shop buton-->
+                <StackPanel Orientation="Horizontal" Height="20" HorizontalAlignment="Left" >
+
+                    <Viewbox Height="10">
+                        <Label Content="verzamelde letters:" Background="#00000000" FontFamily="Verdana Pro Cond" Foreground="#FFFAFAFA"/>
+                    </Viewbox>
+
+                    <Viewbox Height="10" >
+                        <Label Name="lblAlfabet"  Content="A B C D E F G H I J K L M N P Q R S T U V W X Y Z" Foreground="#FF545555" Background="#00000000" FontFamily="Verdana Pro Cond" />
+
+                    </Viewbox>
+
+
+
+                </StackPanel>
+                <StackPanel >
+                    <Viewbox Height="10" >
+                        <Button  Name="BtnShop" Content="Shop " Background="#00000000" FontFamily="Verdana Pro Cond" Foreground="#FFFAFAFA" Click="BtnShop_Click" >
+
+                        </Button>
+                    </Viewbox>
+                </StackPanel>
+
+            </StackPanel>
+        </Viewbox>
+      
+    </Grid>
+
+
+  
+     
+</Window>
