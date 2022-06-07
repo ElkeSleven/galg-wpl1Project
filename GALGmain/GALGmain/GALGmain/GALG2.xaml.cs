@@ -27,7 +27,6 @@ namespace GALGmain
         public GALG2()
         {
             InitializeComponent();
-            InitializeComponent();
             Startklok();
             StartWaarden();
         }

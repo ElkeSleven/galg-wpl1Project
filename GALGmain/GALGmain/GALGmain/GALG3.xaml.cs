@@ -243,7 +243,7 @@ namespace GALGmain
             }
         }
 
-        // hier staat de value van alle varabelen  en hoe het spel moet worden gestart na dat er op niet spel worde geklickt 
+        // hier staat de value van alle varabelen  en hoe het spel moet worden gestart   na dat er op nieuw spel worde geklickt 
         private void StartWaarden()
         {
             lblDateTime.Content = DateTime.Now.ToString();                       // 4/01/2022    10:31:44

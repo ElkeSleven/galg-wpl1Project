@@ -81,7 +81,6 @@ namespace GALGmain
                     lettersToegestaan = Array.Exists(toegestaneKarakter, element => element.Equals(inputIndex));
                     if (lettersToegestaan == true)
                     {
-
                         lblUitput.Content = $"start met raden je hebt {aantalLevens} levens ";
                         btnVerberg.IsEnabled = false;
                         btnRaad.IsEnabled = true;
